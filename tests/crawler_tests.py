@@ -29,4 +29,5 @@ class Scraper_tests(unittest.TestCase):
         self.assertFalse(data_in_expected_format(self.test_data[20:]))
 
     def tearDown(self):
-        os.remove("numa_archive.csv")
+        if os.path.isfile("numa_archive.csv"):
+            os.remove("numa_archive.csv")
