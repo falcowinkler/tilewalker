@@ -2,6 +2,6 @@ language: python
 python:
   - "3.6"
 install:
-  - pipenv install -d --system
+  - pipenv install --system
 script:
   - python3 -m unittest discover -p "*_tests.py"
