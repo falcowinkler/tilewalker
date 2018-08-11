@@ -63,8 +63,8 @@ def persist(data, labels, csvfile):
 
 def data_in_expected_format(data):
     try:
-        re.match(".*#.*#.*#([0-9A-Q@;:y=?<>]{713})|", data).group(1)
-        return True
+        match = re.match(".*#.*#.*#([0-9A-Q@;:y=?<>]{713})|", data).group(1)
+        return match is not None
     except:
         return False
 
